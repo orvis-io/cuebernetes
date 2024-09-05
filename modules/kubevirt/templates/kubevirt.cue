@@ -8,7 +8,7 @@ import (
 	#config: #Config
 	metadata: {
 		name: #config.metadata.name
-		namespace: #config.metadata.namespace
+		namespace: #config.targetNamespace
 		labels:    #config.metadata.labels
 		if #config.metadata.annotations != _|_ {
 			annotations: #config.metadata.annotations
