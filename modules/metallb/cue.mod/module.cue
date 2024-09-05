@@ -4,7 +4,7 @@ language: {
 }
 deps: {
 	"cuebernetes.orvis.io/timoni@v0": {
-		v: "v0.0.17"
+		v: "v0.0.1"
 	}
 	"helm.toolkit.fluxcd.io@v0": {
 		v: "v0.0.2"

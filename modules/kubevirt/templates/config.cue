@@ -5,13 +5,15 @@ import (
 )
 
 // Config defines the schema and defaults for the Instance values.
-#Config: timoniv1.#Module & timoniv1.#HelmReleaseConfig & {
+#Config: timoniv1.#Module & {
+	targetNamespace: string
 }
 
 // Instance takes the config values and outputs the Kubernetes objects.
 #Instance: {
 	config: #Config & {}
 
-	_release: timoniv1.#HelmRelease & {#config: config}
-	objects: _release.objects
+	_operator: #KubeVirtOperator & {#config: config}
+	objects: _operator.objects
+	objects: kubevirt: #KubeVirt & {#config: config}
 }

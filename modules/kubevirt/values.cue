@@ -7,8 +7,4 @@ package main
 
 // Defaults
 values: {
-  repository: url: "https://kubevirt.github.io/kubevirt"
-  chart: name: "kubevirt"
-  sync: targetNamespace: "kubevirt-system"
-  helmValues: {}
 }

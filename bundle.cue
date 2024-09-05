@@ -43,5 +43,12 @@ bundle: {
         chart: version: "1.1.0"
       }
     }
+    "kubevirt": {
+      module: url: "file://./modules/kubevirt"
+      namespace: "cuebernetes"
+      values: #Config & {
+        targetNamespace: "kubevirt-system"
+      }
+    }
   }
 }
